@@ -133,7 +133,7 @@ This reference focuses on **open-source alternatives and composable building blo
 
 This leaderboard curates premier open-source repositories powering modern SIEM platforms, centralized log analytics, detection engineering, threat hunting, and autonomous SOC architectures. Sorted in descending order by live GitHub star counts.
 
-| 🏆 Project | 📦 Domain / Focus | ⭐ GitHub Stars | 📜 License | 🔗 Stargazers Link |
+| 🏆 Project | 📦 Domain / Focus | ⭐ GitHub_Stars | 📜 License | 🔗 Stargazers Link |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Elasticsearch](https://github.com/elastic/elasticsearch)** | Security Analytics & Data Lake Search | [![Stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers) | Elastic License / AGPL | [Stargazers](https://github.com/elastic/elasticsearch/stargazers) |
 | **[Grafana](https://github.com/grafana/grafana)** | Security Observability & SOC Dashboards | [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/grafana/grafana/stargazers) |
