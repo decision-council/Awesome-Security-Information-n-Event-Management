@@ -1,263 +1,199 @@
-# Awesome-Security-Information-n-Event-Management
+# 🛡️ Awesome Security Information & Event Management (SIEM)
 
-## Top Security Information & Event Management (SIEM) Platforms
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Security Information and Event Management (SIEM) Banner" width="100%" />
+</p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Information-n-Event-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Security-Information-n-Event-Management?style=social" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Information-n-Event-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Security-Information-n-Event-Management?style=social" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Information-n-Event-Management/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Security-Information-n-Event-Management" alt="Issues"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Information-n-Event-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
+> 🚀 **A comprehensive, curated ecosystem of Security Information and Event Management (SIEM) platforms, centralized log management, security analytics, detection engineering (Sigma/YARA), correlation engines, threat hunting, UEBA, SOAR orchestration, and open-source SOC architectures.**
 
-**A comprehensive ecosystem of SIEM, security analytics, log management, threat detection and open-source security monitoring platforms**
-
-
-
-*Open-source-first reference covering security information and event management, centralized log collection, detection engineering, correlation, threat hunting, UEBA, threat intelligence, incident investigation, compliance and security analytics.*
-
-
+**Key Topics & SEO Keywords**: `SIEM`, `Security Information and Event Management`, `Log Management`, `Security Analytics`, `Detection Engineering`, `Threat Hunting`, `UEBA`, `User and Entity Behavior Analytics`, `SOC`, `Security Operations Center`, `Correlation Engine`, `Sigma Rules`, `YARA`, `Suricata`, `Zeek`, `Wazuh`, `OpenSearch`, `Elastic Security`, `SOAR`, `Cybersecurity`, `Cloud SIEM`, `Incident Response`.
 
 **Last updated: September 2026**
 
-
-
 Security Information & Event Management (**SIEM**) platforms collect, normalize, correlate, search and analyze security telemetry from across an organization's infrastructure.
-
-
 
 A modern SIEM typically processes:
 
-
-
 ```text
-
 Endpoints
-
    ↓
-
 Servers
-
    ↓
-
 Network Devices
-
    ↓
-
-Cloud
-
+Cloud & Identity
    ↓
-
-Identity
-
+Applications & SaaS
    ↓
-
-Applications
-
+Security Sensors
    ↓
-
-Security Tools
-
+SIEM & Log Lake
    ↓
-
-SIEM
-
+Detection & Correlation
    ↓
-
-Detection
-
+Investigation & Hunting
    ↓
-
-Investigation
-
-   ↓
-
-Response
-
+Automated Response (SOAR)
 ```
-
-
 
 Examples include **Splunk Enterprise Security, Microsoft Sentinel, Google Security Operations, Elastic Security, Exabeam, Sumo Logic Cloud SIEM, LogRhythm, Devo, IBM QRadar and Chronicle SIEM**.
 
-
-
 The modern SIEM ecosystem increasingly combines:
 
+* 📥 Centralized log management and streaming ingestion
+* 🔍 Security analytics and petabyte-scale search
+* 🛡️ Detection engineering (Sigma, YARA, Snort, Zeek)
+* ⚡ Multi-event correlation and risk-based alerting (RBA)
+* 🧠 Threat intelligence integration (STIX/TAXII, MISP, OpenCTI)
+* 👤 Behavioral analytics and User/Entity Behavior Analytics (UEBA)
+* 🎯 Proactive threat hunting and attack graph exploration
+* 🚨 Case management, incident triage, and forensic timelines
+* 🔄 SOAR integration and automated playbook execution
+* 📋 Automated compliance auditing and regulatory reporting (PCI-DSS, HIPAA, SOC 2, ISO 27001, FedRAMP)
+* ☁️ Cloud security telemetry (AWS CloudTrail, Azure Activity, GCP Audit)
+* 💻 Host and endpoint telemetry (osquery, Sysmon, Auditd, Velociraptor)
+* 🌐 Deep network telemetry and packet capture (Suricata, Zeek, Arkime)
+* 🤖 AI-assisted investigation and alert summarization
 
-
-* centralized log management
-
-* security analytics
-
-* detection engineering
-
-* correlation
-
-* threat intelligence
-
-* behavioral analytics
-
-* UEBA
-
-* threat hunting
-
-* incident management
-
-* SOAR integration
-
-* compliance reporting
-
-* cloud security telemetry
-
-* endpoint telemetry
-
-* network telemetry
-
-* machine learning
-
-* AI-assisted investigation
-
-
-
-This README focuses particularly on **open-source alternatives and composable building blocks**, including Wazuh, OpenSearch, Security Onion, Elastic Stack, OSSEC, Graylog, AlienVault OSSIM, SIEMonster and many complementary security projects.
-
-
-
-## Open-source emphasis
-
-
-
-Open-source projects are divided into:
-
-
-
-1. **Direct SIEM platforms** — systems that can independently provide security monitoring, event analysis and detection.
-
-2. **Open-source log analytics platforms** — powerful search and observability systems that can form the data layer of a SIEM.
-
-3. **Network-security platforms** — systems such as Suricata and Zeek that provide high-value security telemetry.
-
-4. **Endpoint-security platforms** — systems such as Wazuh, OSSEC and Velociraptor.
-
-5. **Detection-engineering projects** — Sigma, YARA and related rule frameworks.
-
-6. **Threat-intelligence platforms** — MISP, OpenCTI and related projects.
-
-7. **SOC-in-a-box distributions** — Security Onion and similar integrated platforms.
-
-8. **Open-source SIEM building blocks** — Kafka, Fluent Bit, OpenTelemetry, Grafana, OpenSearch and other infrastructure.
-
-
-
-> **Important:** A log-management platform is not automatically a complete SIEM. A serious SIEM requires not only ingestion and search, but also detection rules, correlation, alerting, investigation, threat intelligence, retention, access control and operational workflows.
-
-
-
-Wazuh, for example, describes itself as a free and open-source platform unifying XDR and SIEM capabilities, while Security Onion combines network visibility, host visibility, intrusion detection, log management and case management.
-
-
-
-Contributions and corrections are welcome.
-
-
+This reference focuses on **open-source alternatives and composable building blocks**, including Wazuh, OpenSearch, Security Onion, Elastic Stack, OSSEC, Graylog, AlienVault OSSIM, SIEMonster, and complementary SOC tools.
 
 ---
 
+## 📑 Table of Contents
 
-
-## Table of Contents
-
-
-
-* [SaaS/Hosted Platforms](#saashosted-platforms)
-
-* [Open-Source SIEM Platforms](#open-source-siem-platforms)
-
-* [Open-Source Log Analytics & Security Analytics](#open-source-log-analytics--security-analytics)
-
-* [Open-Source SOC-in-a-Box Platforms](#open-source-soc-in-a-box-platforms)
-
-* [Open-Source Endpoint Security & HIDS](#open-source-endpoint-security--hids)
-
-* [Open-Source Network Security Telemetry](#open-source-network-security-telemetry)
-
-* [Open-Source Threat Intelligence](#open-source-threat-intelligence)
-
-* [Open-Source Detection Engineering](#open-source-detection-engineering)
-
-* [Open-Source Security Data Pipelines](#open-source-security-data-pipelines)
-
-* [Additional Strong Open-Source Options](#additional-strong-open-source-options)
-
-* [Commercial Platform → Open-Source Equivalents](#commercial-platform--open-source-equivalents)
-
-* [Frameworks for Building Custom SIEM Platforms](#frameworks-for-building-custom-siem-platforms)
-
-* [Reference Architecture](#reference-architecture)
-
-* [Typical SIEM Workflow](#typical-siem-workflow)
-
-* [Log Collection Workflow](#log-collection-workflow)
-
-* [Detection Engineering Workflow](#detection-engineering-workflow)
-
-* [Threat Hunting Workflow](#threat-hunting-workflow)
-
-* [Incident Investigation Workflow](#incident-investigation-workflow)
-
-* [Cloud SIEM Workflow](#cloud-siem-workflow)
-
-* [Capability Matrix](#capability-matrix)
-
-* [Recommended Open-Source Stacks](#recommended-open-source-stacks)
-
-* [What Is Still Difficult to Reproduce in Open Source?](#what-is-still-difficult-to-reproduce-in-open-source)
-
-* [Why Open Source Is Interesting](#why-open-source-is-interesting)
-
-* [How to Contribute](#how-to-contribute)
-
-* [Disclaimer](#disclaimer)
-
-
+* [🏢 SaaS & Hosted Commercial Platforms](#-saas--hosted-commercial-platforms)
+* [⭐ Open-Source Leaderboard (Ranked by Stars)](#-open-source-leaderboard-ranked-by-stars)
+* [🛠️ Open-Source SIEM Platforms](#️-open-source-siem-platforms)
+* [📊 Open-Source Log Analytics & Security Analytics](#-open-source-log-analytics--security-analytics)
+* [📦 Open-Source SOC-in-a-Box Platforms](#-open-source-soc-in-a-box-platforms)
+* [💻 Open-Source Endpoint Security & HIDS](#-open-source-endpoint-security--hids)
+* [🌐 Open-Source Network Security Telemetry](#-open-source-network-security-telemetry)
+* [🧠 Open-Source Threat Intelligence](#-open-source-threat-intelligence)
+* [🎯 Open-Source Detection Engineering](#-open-source-detection-engineering)
+* [⚡ Open-Source Security Data Pipelines](#-open-source-security-data-pipelines)
+* [🧩 Additional Strong Open-Source Options](#-additional-strong-open-source-options)
+* [🔄 Commercial Platform → Open-Source Equivalents](#-commercial-platform--open-source-equivalents)
+* [🏗️ Frameworks for Building Custom SIEM Platforms](#️-frameworks-for-building-custom-siem-platforms)
+* [📐 Reference Architecture](#-reference-architecture)
+* [🔄 Typical SIEM Workflow](#-typical-siem-workflow)
+* [📥 Log Collection Workflow](#-log-collection-workflow)
+* [🎯 Detection Engineering Workflow](#-detection-engineering-workflow)
+* [🏹 Threat Hunting Workflow](#-threat-hunting-workflow)
+* [🔍 Incident Investigation Workflow](#-incident-investigation-workflow)
+* [☁️ Cloud SIEM Workflow](#-cloud-siem-workflow)
+* [📋 Capability Matrix](#-capability-matrix)
+* [💡 Recommended Open-Source Stacks](#-recommended-open-source-stacks)
+* [🤔 What Is Still Difficult to Reproduce in Open Source?](#-what-is-still-difficult-to-reproduce-in-open-source)
+* [✨ Why Open Source Is Interesting](#-why-open-source-is-interesting)
+* [🤝 How to Contribute](#-how-to-contribute)
+* [📈 Star History](#-star-history)
+* [⚖️ Disclaimer](#️-disclaimer)
 
 ---
 
+## 🏢 SaaS & Hosted Commercial Platforms
 
+> 💡 **Market Size & Industry Dynamics**: The global Security Information and Event Management (SIEM) market is valued at **$5.8B – $7.4B**, projected to surge toward **$14.2B+ by 2032** at a robust compound annual growth rate (**CAGR**) of **~14.5%**. The sector is **moderately concentrated at the enterprise peak but highly fragmented across modern architectures**: mega-cap conglomerates (Microsoft, Google Cloud, Cisco/Splunk, IBM, CrowdStrike, Fortinet) dominate monolithic data-lake contracts and compliance consolidation, while high-velocity innovators (Elastic, Sumo Logic, Exabeam, Securonix, Devo) and open-source ecosystems (Wazuh, OpenSearch, Security Onion) drive rapid decentralization through modular, decoupled, and detection-as-code SOC deployments.
 
-# SaaS/Hosted Platforms
-
-
-
-These are commercial, hosted or enterprise-oriented SIEM and security analytics platforms.
-
-
-
-| Platform | Primary Model | Main Strength | Pricing | Free Tier / Trial Limits |
+| 🏢 Platform | 📊 Company Scale (Valuation / Revenue) | 📝 Primary Model & Capabilities | 💰 Starting Pricing | 🎁 Free Tier / Trial Limits |
 | :--- | :--- | :--- | :--- | :--- |
-| [Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html) | Enterprise SIEM | Broad security analytics ecosystem, correlation searches, risk-based alerting (RBA), and deep app integrations | Starts at **~$665–$1,620/GB/day/year** (~$1.82–$4.44/GB/day; entry deployments typically ~$50,000/year for 50 GB/day base ingest + ES multiplier; Splunk Cloud SVC workloads start from ~$12,000–$24,000/year) | **Free Forever Plan**: Splunk Free with 500 MB/day indexing limit (single user, standalone);<br>**Free Trial**: 14-day free trial for Splunk Cloud (up to 5 GB/day indexing) or 60-day Splunk Enterprise trial (500 MB/day) |
-| [Microsoft Sentinel](https://azure.microsoft.com/products/microsoft-sentinel) | Cloud SIEM | Azure/Microsoft ecosystem + cloud-native analytics, automated playbooks, and tight Defender XDR integration | **Pay-As-You-Go**: $4.30/GB ingested;<br>**Commitment Tiers**: Starts at $296.00/day ($2.96/GB) for 100 GB/day tier (~$8,880/month; 50 GB/day preview tier at $156.00/day or $3.12/GB) | **Free Forever Plan**: Ingests Azure Activity Logs, M365 Audit Logs (SharePoint, Exchange, Teams), and Defender alerts at $0;<br>**Free Trial**: 31-day free trial with up to 10 GB/day data ingestion free on new workspaces |
-| [Google Security Operations](https://cloud.google.com/security/products/security-operations) | Cloud SIEM | Chronicle-scale telemetry, 12-month hot data retention, unified Siemplify SOAR, and Mandiant threat intelligence | Starts at **~£2,000 (~$2,550)/TB/year** (~$2.50/GB ingested; minimum annual enterprise packages start at ~$45,000/year for ~18 TB annual data allowance under Bytes of Data Ingested SKU) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / interactive sandbox test-drive with access to Mandiant ThreatSpace cyber ranges |
-| [Elastic Security](https://www.elastic.co/security) | Search/SIEM | Elastic analytics + security detection, custom detection rules, threat hunting, and built-in endpoint security agents | **Elastic Cloud**: Hosted plans start at $95.00/month (Standard) / $109.00–$184.00/month (Platinum/Enterprise); Serverless from $0.18/GB ingested + storage;<br>**Self-Hosted**: Free Basic tier license is $0 | **Free Forever Plan**: Self-managed Elastic Security Basic tier ($0 forever, unlimited ingest on self-hosted infrastructure);<br>**Free Trial**: 14-day free trial on Elastic Cloud with full Platinum/Enterprise SIEM features |
-| [Exabeam](https://www.exabeam.com/) | SIEM/UEBA | Behavioral analytics, smart timelines, automated incident investigation, and baseline risk scoring | Starts at **~$36,000/year** (~$3,000/month; ~$1.97/GB) for base 50 GB/day ingestion tier on New-Scale SIEM (Security Log Management starts at ~$31,000/year) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) on live customer telemetry (or guided interactive sandbox demo) |
-| [Sumo Logic Cloud SIEM](https://www.sumologic.com/solutions/cloud-siem) | Cloud SIEM | Cloud-native security analytics, Insight generation, automated correlation, and multi-tenant SaaS | Flex credits starting at **~$2.50–$3.00/GB ingested** (~$1.50–$2.00/credit; Cloud SIEM / Enterprise Security contracts start at ~$24,000/year or ~$2,000/month) | **Free Forever Plan**: Sumo Logic Free tier includes 500 MB/day log ingestion for up to 3 users;<br>**Free Trial**: 30-day free trial with full Cloud SIEM features and up to 1 GB/day data ingestion |
-| [LogRhythm](https://logrhythm.com/) | Enterprise SIEM | High-throughput security monitoring, DetectX analytics, and compliance automation | Unified License Program (ULP) starting at **~$65.00/MPS/year** (~$32,500/year or ~$2,708/month for 500 MPS base deployment; named analyst access ~$184/user/year) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / evaluation license for up to 500 MPS |
-| [Devo](https://www.devo.com/) | Cloud SIEM | Real-time security analytics, high-speed querying, and 400 days of included hot data retention | Ingest-based daily tiers starting at **~$2.46/GB** ($90,000/year for 100 GB/day tier with 400-day hot retention included; base mid-market contracts start from ~$30,000–$45,000/year for 30–50 GB/day) | **No free forever plan**;<br>**Free Trial**: 30-day Proof of Value (POV) / trial with full search capabilities and 400-day hot retention on customer logs |
-| [IBM QRadar](https://www.ibm.com/products/qradar-siem) | Enterprise SIEM | Mature event and network flow correlation, QFlow analysis, and regulatory compliance packs | Starts at **$12,074.40/year** (~$1,006.20/month) for 500 EPS (Events Per Second) and 10,000 FPM (Flows Per Minute) base entry contract on AWS Marketplace | **Free Forever Plan**: QRadar Community Edition (CE) capped at 100 EPS and 5,000 FPM (single-node, renewable 3-month license);<br>**Free Trial**: 14-day free trial for QRadar SaaS on IBM Cloud / AWS |
-| [Chronicle SIEM](https://cloud.google.com/security/products/security-operations) | Cloud SIEM | High-scale security telemetry, petabyte-scale indexing, real-time YARA-L detection, and raw event normalization (UDM) | Data-cap model starting at **~£2,000 (~$2,550)/TB/year** (~$2.50/GB ingested; entry enterprise commitments start at ~$45,000/year for ~18 TB annual ingestion capacity) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / interactive evaluation environment with Mandiant threat intelligence |
-| [Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/) | Cloud SIEM/XDR | Detection + investigation, endpoint telemetry (Insight Agent), attacker behavior analytics, and deception technology | **$5.89/asset/month** ($70.40/asset/year) for Essentials tier with a 250-asset minimum commitment (~$1,472.50/month or ~$17,600/year) | **Free Trial**: 30-day full-featured free trial with unlimited log source ingestion, agent deployment, and automated threat detection (no credit card required) |
-| [CrowdStrike Falcon Next-Gen SIEM](https://www.crowdstrike.com/platform/next-gen-siem/) | SIEM/XDR | Endpoint-centric security analytics, indexing-free LogScale architecture, and 150+ TB/day ingestion capability | **$5.95/GB** for third-party log ingestion (Pay-As-You-Go); base annual platform contracts start from ~$18,000–$25,000/year (base Falcon endpoint protection starts at $59.99/device/year) | **Perpetual Free Allowance**: Active Falcon Insight XDR subscribers receive 10 GB/day of free third-party data ingestion into Next-Gen SIEM;<br>**Free Trial**: 15-day free trial of Falcon platform for up to 100 devices/workloads |
-| [Securonix](https://www.securonix.com/) | SIEM/UEBA | Behavioral analytics, Snowflake-based cloud data architecture (EON), and insider threat detection | Capacity-based pricing starting at **~$30,000–$40,000/year** (~$2,500–$3,330/month for base 30–50 GB/day daily ingestion tier; compute and storage billed separately via Snowflake) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / evaluation sandbox; includes Free SIEM Migration Program incentives for qualifying legacy migrations |
-| [Exabeam Fusion](https://www.exabeam.com/) | SIEM/UEBA | Threat detection and investigation, bundled New-Scale SIEM + UEBA + turnkey SOAR playbooks | Starts at **~$51,000/year** (~$4,250/month; ~$2.79/GB) for 50 GB/day ingestion tier with SIEM, UEBA, and Incident Responder included | **No free forever plan**;<br>**Free Trial**: 30-day guided enterprise Proof of Concept (POC) on live customer telemetry |
-| [Trellix Helix](https://www.trellix.com/en-us/products/helix.html) | SIEM/SOC | Security operations analytics, integrated XDR connecting endpoint, network, and email telemetry | Starts at **~$28,000–$32,000/year** (~$2,330–$2,660/month; ~$3.50–$5.00/endpoint/month) for base entry subscription tier (up to 500 endpoints or 100 EPS) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Value (POV) / guided pilot on monitored endpoints and network telemetry |
-| [FortiSIEM](https://www.fortinet.com/products/siem/fortisiem) | SIEM | Fortinet ecosystem, automated CMDB discovery, network performance monitoring, and security analytics | FortiSIEM Cloud starts at **~$25,000–$28,000/year** (~$2,080–$2,330/month) for base 10 FortiSIEM Compute Unit (FCU) subscription bundle including 500 GB online storage | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / evaluation license arranged via Fortinet channel partners |
-| [AlienVault USM Anywhere](https://cybersecurity.opentext.com/products/usm-anywhere) | Cloud SIEM | Unified security monitoring, asset discovery, vulnerability assessment, and intrusion detection | **Essentials**: Starts at $1,075.00/month (~$12,900/year);<br>**Standard**: Starts at $1,695.00/month (~$20,340/year);<br>**Premium**: Starts at $2,595.00/month | **Free Trial**: 14-day free trial of USM Anywhere with full access to cloud sensors, asset discovery, vulnerability assessment, and threat alarms (no credit card required) |
-| [OpenText ArcSight](https://www.opentext.com/products/arcsight) | Enterprise SIEM | Enterprise security analytics, real-time correlation (CORR-Engine), and compliance reporting | ArcSight SaaS base entry packages start at **~$24,000–$30,000/year** (~$2,000–$2,500/month for 250–500 EPS or 25–50 GB/day base ingestion bundle) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / evaluation license with pre-configured connectors and compliance packs |
-| [RSA NetWitness](https://www.netwitness.com/) | SIEM/Network Analytics | Network-centric detection, full PCAP session reconstruction, endpoint visibility, and threat hunting | Base subscription tiers start at **~$25,000–$35,000/year** (~$2,080–$2,916/month for 50 GB/day or 500 EPS base throughput tier) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / sandbox environment with network packet capture and log ingestion |
-| [Graylog Security](https://graylog.org/products/security/) | SIEM | Log analytics + security detection, Sigma rule support, AI incident summaries, and lean SOC workflows | **Graylog Security**: Starts at $18,000.00/year ($1,500.00/month) for 10 GB/day daily ingestion (or 100 GCUs);<br>**Graylog Enterprise**: Starts at $15,000.00/year ($1,250.00/month) | **Free Forever Plan**: Graylog Open is 100% free forever with no daily ingest cap and no volume limit (SSPL licensed, self-hosted);<br>**Free Trial**: 14-day free trial of Graylog Security on Graylog Cloud |
-
-
+| **[Microsoft Sentinel](https://azure.microsoft.com/products/microsoft-sentinel)** | **~$3.1T+** Market Cap (Microsoft) • **~$245B+** Revenue | Cloud SIEM • Azure/Microsoft ecosystem, cloud-native analytics, automated playbooks, Defender XDR integration | **Pay-As-You-Go**: $4.30/GB ingested;<br>**Commitment Tiers**: Starts at $296.00/day ($2.96/GB) for 100 GB/day tier (~$8,880/mo; 50 GB/day preview tier at $156.00/day or $3.12/GB) | **Free Forever Plan**: Ingests Azure Activity Logs, M365 Audit Logs (SharePoint, Exchange, Teams), and Defender alerts at $0;<br>**Free Trial**: 31-day free trial with up to 10 GB/day data ingestion free on new workspaces |
+| **[Google Security Operations](https://cloud.google.com/security/products/security-operations)** | **~$2.1T+** Market Cap (Alphabet / Google) • **~$330B+** Revenue | Cloud SIEM • Chronicle-scale telemetry, 12-month hot retention, unified Siemplify SOAR, Mandiant threat intelligence | Starts at **~£2,000 (~$2,550)/TB/year** (~$2.50/GB ingested; minimum annual enterprise packages start at ~$45,000/year for ~18 TB annual data allowance under Bytes of Data Ingested SKU) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / interactive sandbox test-drive with access to Mandiant ThreatSpace cyber ranges |
+| **[Chronicle SIEM](https://cloud.google.com/security/products/security-operations)** | **~$2.1T+** Market Cap (Alphabet / Google) • **~$330B+** Revenue | Cloud SIEM • High-scale security telemetry, petabyte-scale indexing, real-time YARA-L detection, raw event normalization (UDM) | Data-cap model starting at **~£2,000 (~$2,550)/TB/year** (~$2.50/GB ingested; entry enterprise commitments start at ~$45,000/year for ~18 TB annual ingestion capacity) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / interactive evaluation environment with Mandiant threat intelligence |
+| **[Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html)** | **~$230B+** Market Cap (Cisco Systems) • **~$4.2B+** Splunk ARR | Enterprise SIEM • Broad security analytics ecosystem, correlation searches, risk-based alerting (RBA), and deep app integrations | Starts at **~$665–$1,620/GB/day/year** (~$1.82–$4.44/GB/day; entry deployments typically ~$50,000/year for 50 GB/day base ingest + ES multiplier; Splunk Cloud SVC workloads start from ~$12,000–$24,000/year) | **Free Forever Plan**: Splunk Free with 500 MB/day indexing limit (single user, standalone);<br>**Free Trial**: 14-day free trial for Splunk Cloud (up to 5 GB/day indexing) or 60-day Splunk Enterprise trial (500 MB/day) |
+| **[IBM QRadar](https://www.ibm.com/products/qradar-siem)** | **~$200B+** Market Cap (IBM) • **~$62B+** Annual Revenue | Enterprise SIEM • Mature event and network flow correlation, QFlow analysis, and regulatory compliance packs | Starts at **$12,074.40/year** (~$1,006.20/month) for 500 EPS (Events Per Second) and 10,000 FPM (Flows Per Minute) base entry contract on AWS Marketplace | **Free Forever Plan**: QRadar Community Edition (CE) capped at 100 EPS and 5,000 FPM (single-node, renewable 3-month license);<br>**Free Trial**: 14-day free trial for QRadar SaaS on IBM Cloud / AWS |
+| **[CrowdStrike Falcon Next-Gen SIEM](https://www.crowdstrike.com/platform/next-gen-siem/)** | **~$85B+** Market Cap • **~$3.9B+** Annual ARR | SIEM/XDR • Endpoint-centric security analytics, indexing-free LogScale architecture, and 150+ TB/day ingestion capability | **$5.95/GB** for third-party log ingestion (Pay-As-You-Go); base annual platform contracts start from ~$18,000–$25,000/year (base Falcon endpoint protection starts at $59.99/device/year) | **Perpetual Free Allowance**: Active Falcon Insight XDR subscribers receive 10 GB/day of free third-party data ingestion into Next-Gen SIEM;<br>**Free Trial**: 15-day free trial of Falcon platform for up to 100 devices/workloads |
+| **[FortiSIEM](https://www.fortinet.com/products/siem/fortisiem)** | **~$60B+** Market Cap (Fortinet) • **~$5.8B+** Annual Revenue | SIEM • Fortinet ecosystem, automated CMDB discovery, network performance monitoring, and security analytics | FortiSIEM Cloud starts at **~$25,000–$28,000/year** (~$2,080–$2,330/month) for base 10 FortiSIEM Compute Unit (FCU) subscription bundle including 500 GB online storage | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / evaluation license arranged via Fortinet channel partners |
+| **[Elastic Security](https://www.elastic.co/security)** | **~$10B+** Market Cap (Elastic N.V.) • **~$1.4B+** Annual Revenue | Search/SIEM • Elastic analytics + security detection, custom detection rules, threat hunting, and built-in endpoint security agents | **Elastic Cloud**: Hosted plans start at $95.00/month (Standard) / $109.00–$184.00/month (Platinum/Enterprise); Serverless from $0.18/GB ingested + storage;<br>**Self-Hosted**: Free Basic tier license is $0 | **Free Forever Plan**: Self-managed Elastic Security Basic tier ($0 forever, unlimited ingest on self-hosted infrastructure);<br>**Free Trial**: 14-day free trial on Elastic Cloud with full Platinum/Enterprise SIEM features |
+| **[OpenText ArcSight](https://www.opentext.com/products/arcsight)** | **~$9B+** Market Cap (OpenText) • **~$5.8B+** Annual Revenue | Enterprise SIEM • Enterprise security analytics, real-time correlation (CORR-Engine), and compliance reporting | ArcSight SaaS base entry packages start at **~$24,000–$30,000/year** (~$2,000–$2,500/month for 250–500 EPS or 25–50 GB/day base ingestion bundle) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) / evaluation license with pre-configured connectors and compliance packs |
+| **[Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/)** | **~$2.5B+** Market Cap • **~$820M+** Annual ARR | Cloud SIEM/XDR • Detection + investigation, endpoint telemetry (Insight Agent), attacker behavior analytics, deception technology | **$5.89/asset/month** ($70.40/asset/year) for Essentials tier with a 250-asset minimum commitment (~$1,472.50/month or ~$17,600/year) | **Free Trial**: 30-day full-featured free trial with unlimited log source ingestion, agent deployment, and automated threat detection (no credit card required) |
+| **[Exabeam](https://www.exabeam.com/)** | **~$2.4B** Combined Valuation • **~$300M+** ARR | SIEM/UEBA • Behavioral analytics, smart timelines, automated incident investigation, and baseline risk scoring | Starts at **~$36,000/year** (~$3,000/month; ~$1.97/GB) for base 50 GB/day ingestion tier on New-Scale SIEM (Security Log Management starts at ~$31,000/year) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Concept (POC) on live customer telemetry (or guided interactive sandbox demo) |
+| **[Exabeam Fusion](https://www.exabeam.com/)** | **~$2.4B** Combined Valuation • **~$300M+** ARR | SIEM/UEBA • Threat detection and investigation, bundled New-Scale SIEM + UEBA + turnkey SOAR playbooks | Starts at **~$51,000/year** (~$4,250/month; ~$2.79/GB) for 50 GB/day ingestion tier with SIEM, UEBA, and Incident Responder included | **No free forever plan**;<br>**Free Trial**: 30-day guided enterprise Proof of Concept (POC) on live customer telemetry |
+| **[Trellix Helix](https://www.trellix.com/en-us/products/helix.html)** | **~$2.0B+** Valuation (Symphony Technology Group) • **~$1.8B+** Revenue | SIEM/SOC • Security operations analytics, integrated XDR connecting endpoint, network, and email telemetry | Starts at **~$28,000–$32,000/year** (~$2,330–$2,660/month; ~$3.50–$5.00/endpoint/month) for base entry subscription tier (up to 500 endpoints or 100 EPS) | **No free forever plan**;<br>**Free Trial**: 30-day enterprise Proof of Value (POV) / guided pilot on monitored endpoints and network telemetry |
+| **[Sumo Logic Cloud SIEM](https://www.sumologic.com/solutions/cloud-siem)** | **~$1.7B** Acquisition Valuation (Francisco Partners) • **~$320M+** ARR | Cloud SIEM • Cloud-native security analytics, Insight generation, automated correlation, and multi-tenant SaaS | Flex credits starting at **~$2.50–$3.00/GB ingested** (~$1.50–$2.00/credit; Cloud SIEM / Enterprise Security contracts start at ~$24,000/year or ~$2,000/month) | **Free Forever Plan**: Sumo Logic Free tier includes 500 MB/day log ingestion for up to 3 users;<br>**Free Trial**: 30-day free trial with full Cloud SIEM features and up to 1 GB/day data ingestion |
+| **[Devo](https://www.devo.com/)** | **~$1.5B** Valuation (Series F Unicorn) • **~$100M+** Annual ARR | Cloud SIEM • Real-time security analytics, high-speed querying, and 400 days of included hot data retention | Ingest-based daily tiers starting at **~$2.46/GB** ($90,000/year for 100 GB/day tier with 400-day hot retention included; base mid-market contracts start from ~$30,000–$45,000/year for 30–50 GB/day) | **No free forever plan**;<br>**Free Trial**: 30-day Proof of Value (POV) / trial with full search capabilities and 400-day hot retention on customer logs |
+| **[LogRhythm](https://logrhythm.com/)** | **~$1.2B+** Valuation (Merged with Exabeam) • **~$150M+** Revenue | Enterprise SIEM • High-throughput security monitoring, DetectX analytics, and compliance automation | Unified License Program (ULP) starting at **~$65.00/MPS/year** (~$32,500/year or ~$2,708/month for 500 MPS base deployment; named analyst access ~$184/user/year) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / evaluation license for up to 500 MPS |
+| **[AlienVault USM Anywhere](https://cybersecurity.opentext.com/products/usm-anywhere)** | **~$1.0B+** Valuation (LevelBlue / AT&T Cybersecurity) • **~$250M+** Revenue | Cloud SIEM • Unified security monitoring, asset discovery, vulnerability assessment, and intrusion detection | **Essentials**: Starts at $1,075.00/month (~$12,900/year);<br>**Standard**: Starts at $1,695.00/month (~$20,340/year);<br>**Premium**: Starts at $2,595.00/month | **Free Trial**: 14-day free trial of USM Anywhere with full access to cloud sensors, asset discovery, vulnerability assessment, and threat alarms (no credit card required) |
+| **[Securonix](https://www.securonix.com/)** | **~$1.0B+** Valuation (Vista Equity Partners) • **~$120M+** ARR | SIEM/UEBA • Behavioral analytics, Snowflake-based cloud data architecture (EON), and insider threat detection | Capacity-based pricing starting at **~$30,000–$40,000/year** (~$2,500–$3,330/month for base 30–50 GB/day daily ingestion tier; compute and storage billed separately via Snowflake) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / evaluation sandbox; includes Free SIEM Migration Program incentives for qualifying legacy migrations |
+| **[RSA NetWitness](https://www.netwitness.com/)** | **~$500M+** Valuation (Clearlake Capital / STG) • **~$120M+** Revenue | SIEM/Network Analytics • Network-centric detection, full PCAP session reconstruction, endpoint visibility, threat hunting | Base subscription tiers start at **~$25,000–$35,000/year** (~$2,080–$2,916/month for 50 GB/day or 500 EPS base throughput tier) | **No free forever plan**;<br>**Free Trial**: 30-day guided Proof of Concept (POC) / sandbox environment with network packet capture and log ingestion |
+| **[Graylog Security](https://graylog.org/products/security/)** | **~$150M+** Valuation • **~$30M+** Annual ARR | SIEM • Log analytics + security detection, Sigma rule support, AI incident summaries, and lean SOC workflows | **Graylog Security**: Starts at $18,000.00/year ($1,500.00/month) for 10 GB/day daily ingestion (or 100 GCUs);<br>**Graylog Enterprise**: Starts at $15,000.00/year ($1,250.00/month) | **Free Forever Plan**: Graylog Open is 100% free forever with no daily ingest cap and no volume limit (SSPL licensed, self-hosted);<br>**Free Trial**: 14-day free trial of Graylog Security on Graylog Cloud |
 
 ---
 
+## ⭐ Open-Source Leaderboard (Ranked by Stars)
 
+This leaderboard curates premier open-source repositories powering modern SIEM platforms, centralized log analytics, detection engineering, threat hunting, and autonomous SOC architectures. Sorted in descending order by live GitHub star counts.
 
-# Open-Source SIEM Platforms
+| 🏆 Project | 📦 Domain / Focus | ⭐ GitHub Stars | 📜 License | 🔗 Stargazers Link |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Elasticsearch](https://github.com/elastic/elasticsearch)** | Security Analytics & Data Lake Search | [![Stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers) | Elastic License / AGPL | [Stargazers](https://github.com/elastic/elasticsearch/stargazers) |
+| **[Grafana](https://github.com/grafana/grafana)** | Security Observability & SOC Dashboards | [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/grafana/grafana/stargazers) |
+| **[Apache Superset](https://github.com/apache/superset)** | Enterprise Security BI & Telemetry Viz | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | Apache-2.0 | [Stargazers](https://github.com/apache/superset/stargazers) |
+| **[scikit-learn](https://github.com/scikit-learn/scikit-learn)** | Machine Learning & Anomaly Modeling | [![Stars](https://img.shields.io/github/stars/scikit-learn/scikit-learn?style=social&color=white)](https://github.com/scikit-learn/scikit-learn/stargazers) | BSD-3-Clause | [Stargazers](https://github.com/scikit-learn/scikit-learn/stargazers) |
+| **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** | Ultra-Fast Columnar Security Data Lake | [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) | Apache-2.0 | [Stargazers](https://github.com/ClickHouse/ClickHouse/stargazers) |
+| **[Metabase](https://github.com/metabase/metabase)** | Log Dashboards & Security Analytics | [![Stars](https://img.shields.io/github/stars/metabase/metabase?style=social&color=white)](https://github.com/metabase/metabase/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/metabase/metabase/stargazers) |
+| **[Apache Kafka](https://github.com/apache/kafka)** | High-Throughput Security Event Bus | [![Stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers) | Apache-2.0 | [Stargazers](https://github.com/apache/kafka/stargazers) |
+| **[Grafana Loki](https://github.com/grafana/loki)** | Log Aggregation & Grep-Optimized Storage | [![Stars](https://img.shields.io/github/stars/grafana/loki?style=social&color=white)](https://github.com/grafana/loki/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/grafana/loki/stargazers) |
+| **[XGBoost](https://github.com/dmlc/xgboost)** | Gradient Boosted Threat Scoring Models | [![Stars](https://img.shields.io/github/stars/dmlc/xgboost?style=social&color=white)](https://github.com/dmlc/xgboost/stargazers) | Apache-2.0 | [Stargazers](https://github.com/dmlc/xgboost/stargazers) |
+| **[osquery](https://github.com/osquery/osquery)** | SQL-Powered Endpoint Instrumentation | [![Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) | Apache-2.0 | [Stargazers](https://github.com/osquery/osquery/stargazers) |
+| **[Vector](https://github.com/vectordotdev/vector)** | High-Performance Observability Data Pipeline | [![Stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers) | MPL-2.0 | [Stargazers](https://github.com/vectordotdev/vector/stargazers) |
+| **[SpiderFoot](https://github.com/smicallef/spiderfoot)** | Automated OSINT & Attack Surface Recon | [![Stars](https://img.shields.io/github/stars/smicallef/spiderfoot?style=social&color=white)](https://github.com/smicallef/spiderfoot/stargazers) | MIT License | [Stargazers](https://github.com/smicallef/spiderfoot/stargazers) |
+| **[Kibana](https://github.com/elastic/kibana)** | Elastic Investigation & Detection UI | [![Stars](https://img.shields.io/github/stars/elastic/kibana?style=social&color=white)](https://github.com/elastic/kibana/stargazers) | Elastic License / AGPL | [Stargazers](https://github.com/elastic/kibana/stargazers) |
+| **[LightGBM](https://github.com/microsoft/LightGBM)** | Fast Tree-Based UEBA Anomaly Modeling | [![Stars](https://img.shields.io/github/stars/microsoft/LightGBM?style=social&color=white)](https://github.com/microsoft/LightGBM/stargazers) | MIT License | [Stargazers](https://github.com/microsoft/LightGBM/stargazers) |
+| **[Wazuh](https://github.com/wazuh/wazuh)** | Unified Open-Source XDR & SIEM Platform | [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | GPL-2.0 | [Stargazers](https://github.com/wazuh/wazuh/stargazers) |
+| **[Logstash](https://github.com/elastic/logstash)** | Server-Side Data Processing & Normalization | [![Stars](https://img.shields.io/github/stars/elastic/logstash?style=social&color=white)](https://github.com/elastic/logstash/stargazers) | Elastic License / AGPL | [Stargazers](https://github.com/elastic/logstash/stargazers) |
+| **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** | Distributed SIEM & Security Analytics Engine | [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers) | Apache-2.0 | [Stargazers](https://github.com/opensearch-project/OpenSearch/stargazers) |
+| **[Fluentd](https://github.com/fluent/fluentd)** | Unified Log Collection & Routing Layer | [![Stars](https://img.shields.io/github/stars/fluent/fluentd?style=social&color=white)](https://github.com/fluent/fluentd/stargazers) | Apache-2.0 | [Stargazers](https://github.com/fluent/fluentd/stargazers) |
+| **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** | Automated MITRE ATT&CK Detection Validation | [![Stars](https://img.shields.io/github/stars/redcanaryco/atomic-red-team?style=social&color=white)](https://github.com/redcanaryco/atomic-red-team/stargazers) | MIT License | [Stargazers](https://github.com/redcanaryco/atomic-red-team/stargazers) |
+| **[Sigma](https://github.com/SigmaHQ/sigma)** | Generic Detection Rule Standard for SIEMs | [![Stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) | DRL-1.1 | [Stargazers](https://github.com/SigmaHQ/sigma/stargazers) |
+| **[PyOD](https://github.com/yzhao062/pyod)** | Comprehensive Python Outlier Detection (UEBA) | [![Stars](https://img.shields.io/github/stars/yzhao062/pyod?style=social&color=white)](https://github.com/yzhao062/pyod/stargazers) | BSD-2-Clause | [Stargazers](https://github.com/yzhao062/pyod/stargazers) |
+| **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** | Enterprise Cyber Threat Intelligence Platform | [![Stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers) | Apache-2.0 | [Stargazers](https://github.com/OpenCTI-Platform/opencti/stargazers) |
+| **[YARA](https://github.com/VirusTotal/yara)** | Pattern Matching Swiss Army Knife for Malware | [![Stars](https://img.shields.io/github/stars/VirusTotal/yara?style=social&color=white)](https://github.com/VirusTotal/yara/stargazers) | BSD-3-Clause | [Stargazers](https://github.com/VirusTotal/yara/stargazers) |
+| **[Falco](https://github.com/falcosecurity/falco)** | Cloud-Native Runtime Threat Detection & Alerts | [![Stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers) | Apache-2.0 | [Stargazers](https://github.com/falcosecurity/falco/stargazers) |
+| **[Graylog Server](https://github.com/Graylog2/graylog2-server)** | Centralized Log Management & SIEM Core | [![Stars](https://img.shields.io/github/stars/Graylog2/graylog2-server?style=social&color=white)](https://github.com/Graylog2/graylog2-server/stargazers) | SSPL | [Stargazers](https://github.com/Graylog2/graylog2-server/stargazers) |
+| **[Fluent Bit](https://github.com/fluent/fluent-bit)** | Fast & Lightweight Telemetry Processor | [![Stars](https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white)](https://github.com/fluent/fluent-bit/stargazers) | Apache-2.0 | [Stargazers](https://github.com/fluent/fluent-bit/stargazers) |
+| **[Zeek](https://github.com/zeek/zeek)** | Network Security Monitoring & Behavioral Protocol Analysis | [![Stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers) | BSD-3-Clause | [Stargazers](https://github.com/zeek/zeek/stargazers) |
+| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | Vendor-Neutral Telemetry Collection Pipeline | [![Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Apache-2.0 | [Stargazers](https://github.com/open-telemetry/opentelemetry-collector/stargazers) |
+| **[Arkime](https://github.com/arkime/arkime)** | Large-Scale Full Network Packet Capture & Search | [![Stars](https://img.shields.io/github/stars/arkime/arkime?style=social&color=white)](https://github.com/arkime/arkime/stargazers) | Apache-2.0 | [Stargazers](https://github.com/arkime/arkime/stargazers) |
+| **[CALDERA](https://github.com/mitre/caldera)** | Automated Adversary Emulation Framework | [![Stars](https://img.shields.io/github/stars/mitre/caldera?style=social&color=white)](https://github.com/mitre/caldera/stargazers) | Apache-2.0 | [Stargazers](https://github.com/mitre/caldera/stargazers) |
+| **[Suricata](https://github.com/OISF/suricata)** | High-Performance Network IDS/IPS/NSM | [![Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) | GPL-2.0 | [Stargazers](https://github.com/OISF/suricata/stargazers) |
+| **[MISP](https://github.com/MISP/MISP)** | Malware Information Sharing & Threat Intelligence | [![Stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) | GPL-3.0 | [Stargazers](https://github.com/MISP/MISP/stargazers) |
+| **[Apache NiFi](https://github.com/apache/nifi)** | Visual Data Flow Orchestration & Routing | [![Stars](https://img.shields.io/github/stars/apache/nifi?style=social&color=white)](https://github.com/apache/nifi/stargazers) | Apache-2.0 | [Stargazers](https://github.com/apache/nifi/stargazers) |
+| **[River](https://github.com/online-ml/river)** | Online Machine Learning for Streaming Logs | [![Stars](https://img.shields.io/github/stars/online-ml/river?style=social&color=white)](https://github.com/online-ml/river/stargazers) | BSD-3-Clause | [Stargazers](https://github.com/online-ml/river/stargazers) |
+| **[GRR Rapid Response](https://github.com/google/grr)** | Enterprise Remote Live Forensics & Triage | [![Stars](https://img.shields.io/github/stars/google/grr?style=social&color=white)](https://github.com/google/grr/stargazers) | Apache-2.0 | [Stargazers](https://github.com/google/grr/stargazers) |
+| **[OSSEC](https://github.com/ossec/ossec-hids)** | Host-Based Intrusion Detection System (HIDS) | [![Stars](https://img.shields.io/github/stars/ossec/ossec-hids?style=social&color=white)](https://github.com/ossec/ossec-hids/stargazers) | GPL-2.0 | [Stargazers](https://github.com/ossec/ossec-hids/stargazers) |
+| **[Tetragon](https://github.com/cilium/tetragon)** | eBPF-Based Security Observability & Runtime Enforcement | [![Stars](https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white)](https://github.com/cilium/tetragon/stargazers) | Apache-2.0 | [Stargazers](https://github.com/cilium/tetragon/stargazers) |
+| **[YARA Rules](https://github.com/Yara-Rules/rules)** | Curated Open-Source YARA Rule Library | [![Stars](https://img.shields.io/github/stars/Yara-Rules/rules?style=social&color=white)](https://github.com/Yara-Rules/rules/stargazers) | GPL-3.0 | [Stargazers](https://github.com/Yara-Rules/rules/stargazers) |
+| **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)** | Integrated SOC-in-a-Box & Threat Hunting Platform | [![Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers) | GPL-2.0 | [Stargazers](https://github.com/Security-Onion-Solutions/securityonion/stargazers) |
+| **[IntelOwl](https://github.com/intelowlproject/IntelOwl)** | Threat Intelligence Orchestration & Enrichment | [![Stars](https://img.shields.io/github/stars/intelowlproject/IntelOwl?style=social&color=white)](https://github.com/intelowlproject/IntelOwl/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/intelowlproject/IntelOwl/stargazers) |
+| **[Velociraptor](https://github.com/Velocidex/velociraptor)** | Digital Forensics & Endpoint Incident Response | [![Stars](https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white)](https://github.com/Velocidex/velociraptor/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/Velocidex/velociraptor/stargazers) |
+| **[TheHive](https://github.com/TheHive-Project/TheHive)** | Security Incident Response & Case Management | [![Stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/TheHive-Project/TheHive/stargazers) |
+| **[HELK](https://github.com/Cyb3rWard0g/HELK)** | Hunting ELK Stack with Advanced Analytics | [![Stars](https://img.shields.io/github/stars/Cyb3rWard0g/HELK?style=social&color=white)](https://github.com/Cyb3rWard0g/HELK/stargazers) | GPL-3.0 | [Stargazers](https://github.com/Cyb3rWard0g/HELK/stargazers) |
+| **[Snort 3](https://github.com/snort3/snort3)** | Next-Gen Network Intrusion Detection System | [![Stars](https://img.shields.io/github/stars/snort3/snort3?style=social&color=white)](https://github.com/snort3/snort3/stargazers) | GPL-2.0 | [Stargazers](https://github.com/snort3/snort3/stargazers) |
+| **[Shuffle](https://github.com/Shuffle/Shuffle)** | Open-Source SOAR & Security Workflow Automation | [![Stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/Shuffle/Shuffle/stargazers) |
+| **[MozDef](https://github.com/mozilla/MozDef)** | Mozilla Defense Automation & SIEM Framework | [![Stars](https://img.shields.io/github/stars/mozilla/MozDef?style=social&color=white)](https://github.com/mozilla/MozDef/stargazers) | MPL-2.0 | [Stargazers](https://github.com/mozilla/MozDef/stargazers) |
+| **[OpenSearch Dashboards](https://github.com/opensearch-project/OpenSearch-Dashboards)** | Visualization & Threat Hunting Interface | [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch-Dashboards?style=social&color=white)](https://github.com/opensearch-project/OpenSearch-Dashboards/stargazers) | Apache-2.0 | [Stargazers](https://github.com/opensearch-project/OpenSearch-Dashboards/stargazers) |
+| **[Yeti](https://github.com/yeti-platform/yeti)** | Threat Intelligence & Observable Repository | [![Stars](https://img.shields.io/github/stars/yeti-platform/yeti?style=social&color=white)](https://github.com/yeti-platform/yeti/stargazers) | Apache-2.0 | [Stargazers](https://github.com/yeti-platform/yeti/stargazers) |
+| **[Security Datasets](https://github.com/OTRF/Security-Datasets)** | Adversary Simulation Log Telemetry for Testing | [![Stars](https://img.shields.io/github/stars/OTRF/Security-Datasets?style=social&color=white)](https://github.com/OTRF/Security-Datasets/stargazers) | GPL-3.0 | [Stargazers](https://github.com/OTRF/Security-Datasets/stargazers) |
+| **[Matano](https://github.com/matanolabs/matano)** | Serverless Security Data Lake & Python Detections | [![Stars](https://img.shields.io/github/stars/matanolabs/matano?style=social&color=white)](https://github.com/matanolabs/matano/stargazers) | Apache-2.0 | [Stargazers](https://github.com/matanolabs/matano/stargazers) |
+| **[Cortex](https://github.com/TheHive-Project/Cortex)** | Observable Analysis & Active Response Engine | [![Stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) | AGPL-3.0 | [Stargazers](https://github.com/TheHive-Project/Cortex/stargazers) |
+| **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** | Collaborative Digital Forensics Case Management | [![Stars](https://img.shields.io/github/stars/dfir-iris/iris-web?style=social&color=white)](https://github.com/dfir-iris/iris-web/stargazers) | LGPL-3.0 | [Stargazers](https://github.com/dfir-iris/iris-web/stargazers) |
+| **[ElastAlert 2](https://github.com/jertel/elastalert2)** | Real-Time Alerting Engine for Elasticsearch | [![Stars](https://img.shields.io/github/stars/jertel/elastalert2?style=social&color=white)](https://github.com/jertel/elastalert2/stargazers) | Apache-2.0 | [Stargazers](https://github.com/jertel/elastalert2/stargazers) |
+| **[Panther Analysis](https://github.com/panther-labs/panther-analysis)** | Detection-as-Code Rules for Cloud SIEM | [![Stars](https://img.shields.io/github/stars/panther-labs/panther-analysis?style=social&color=white)](https://github.com/panther-labs/panther-analysis/stargazers) | Apache-2.0 | [Stargazers](https://github.com/panther-labs/panther-analysis/stargazers) |
+| **[Data Prepper](https://github.com/opensearch-project/data-prepper)** | OpenSearch Ingestion & Normalization Pipeline | [![Stars](https://img.shields.io/github/stars/opensearch-project/data-prepper?style=social&color=white)](https://github.com/opensearch-project/data-prepper/stargazers) | Apache-2.0 | [Stargazers](https://github.com/opensearch-project/data-prepper/stargazers) |
+
+---
+
+## 🛠️ Open-Source SIEM Platforms
 
 
 
@@ -269,7 +205,7 @@ These are the most important projects to investigate when building a SIEM withou
 
 
 
-# 1. Wazuh
+### 1. [Wazuh](https://github.com/wazuh/wazuh) [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)
 
 
 
@@ -347,7 +283,7 @@ It is one of the closest open-source alternatives to a traditional integrated SI
 
 
 
-# 2. OpenSearch + Security Analytics
+### 2. [OpenSearch](https://github.com/opensearch-project/OpenSearch) [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)
 
 
 
@@ -425,7 +361,7 @@ OpenSearch Dashboards
 
 
 
-# 3. Security Onion
+### 3. [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) [![Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)
 
 
 
@@ -507,7 +443,7 @@ Security Onion is particularly strong for network-centric SOC operations.
 
 
 
-# 4. Elastic Stack / Elastic Security
+### 4. [Elasticsearch](https://github.com/elastic/elasticsearch) [![Stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers)
 
 
 
@@ -581,7 +517,7 @@ Capabilities include:
 
 
 
-# 5. OSSEC
+### 5. [OSSEC](https://github.com/ossec/ossec-hids) [![Stars](https://img.shields.io/github/stars/ossec/ossec-hids?style=social&color=white)](https://github.com/ossec/ossec-hids/stargazers)
 
 
 
@@ -643,7 +579,7 @@ Wazuh originated from the OSSEC ecosystem and expanded it significantly.
 
 
 
-# 6. AlienVault OSSIM
+### 6. AlienVault OSSIM
 
 
 
@@ -681,7 +617,7 @@ It remains historically important to the open-source SIEM ecosystem.
 
 
 
-# Open-Source Log Analytics & Security Analytics
+## 📊 Open-Source Log Analytics & Security Analytics
 
 
 
@@ -697,7 +633,7 @@ However, these platforms can provide the **data, search and analytics layer** ne
 
 
 
-## OpenSearch
+### [[OpenSearch](https://github.com/opensearch-project/OpenSearch)] [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers) (https://github.com/opensearch-project/OpenSearch) [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)
 
 
 
@@ -729,7 +665,7 @@ Strong for:
 
 
 
-## OpenSearch Dashboards
+### [[OpenSearch](https://github.com/opensearch-project/OpenSearch)] [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers) (https://github.com/opensearch-project/OpenSearch) [![Stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers) Dashboards
 
 
 
@@ -745,7 +681,7 @@ Provides visualization and operational interfaces for OpenSearch.
 
 
 
-## Elasticsearch
+### [[Elasticsearch](https://github.com/elastic/elasticsearch)] [![Stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers) (https://github.com/elastic/elasticsearch) [![Stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers)
 
 
 
@@ -761,7 +697,7 @@ A major search and analytics engine widely used in SIEM architectures.
 
 
 
-## Kibana
+### [[Kibana](https://github.com/elastic/kibana)] [![Stars](https://img.shields.io/github/stars/elastic/kibana?style=social&color=white)](https://github.com/elastic/kibana/stargazers) (https://github.com/elastic/kibana) [![Stars](https://img.shields.io/github/stars/elastic/kibana?style=social&color=white)](https://github.com/elastic/kibana/stargazers)
 
 
 
@@ -819,7 +755,7 @@ It provides:
 
 
 
-## Grafana Loki
+### [[Grafana](https://github.com/grafana/grafana) [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) Loki](https://github.com/grafana/loki) [![Stars](https://img.shields.io/github/stars/grafana/loki?style=social&color=white)](https://github.com/grafana/loki/stargazers)
 
 
 
@@ -839,7 +775,7 @@ It can serve as a logging layer but requires additional detection/security compo
 
 
 
-## Grafana
+## [Grafana](https://github.com/grafana/grafana) [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers)
 
 
 
@@ -865,11 +801,11 @@ Useful for:
 
 
 
-# Open-Source SOC-in-a-Box Platforms
+## 📦 Open-Source SOC-in-a-Box Platforms
 
 
 
-## Security Onion
+## [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) [![Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)
 
 
 
@@ -889,7 +825,7 @@ It integrates network and host visibility, intrusion detection, packet capture, 
 
 
 
-## Wazuh
+## [Wazuh](https://github.com/wazuh/wazuh) [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)
 
 
 
@@ -965,7 +901,7 @@ It is useful as a laboratory/reference deployment rather than as a drop-in produ
 
 
 
-# Open-Source Endpoint Security & HIDS
+## 💻 Open-Source Endpoint Security & HIDS
 
 
 
@@ -973,7 +909,7 @@ Endpoint telemetry is essential to a modern SIEM.
 
 
 
-## Wazuh
+## [Wazuh](https://github.com/wazuh/wazuh) [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)
 
 
 
@@ -1005,7 +941,7 @@ SIEM
 
 
 
-## OSSEC
+## [OSSEC](https://github.com/ossec/ossec-hids) [![Stars](https://img.shields.io/github/stars/ossec/ossec-hids?style=social&color=white)](https://github.com/ossec/ossec-hids/stargazers)
 
 
 
@@ -1031,7 +967,7 @@ Lightweight HIDS with:
 
 
 
-## Velociraptor
+## [Velociraptor](https://github.com/Velocidex/velociraptor) [![Stars](https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white)](https://github.com/Velocidex/velociraptor/stargazers)
 
 
 
@@ -1059,7 +995,7 @@ Excellent for:
 
 
 
-## osquery
+## [osquery](https://github.com/osquery/osquery) [![Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers)
 
 
 
@@ -1095,7 +1031,7 @@ A SIEM can use osquery results as high-value endpoint telemetry.
 
 
 
-## GRR Rapid Response
+## [GRR](https://github.com/google/grr) [![Stars](https://img.shields.io/github/stars/google/grr?style=social&color=white)](https://github.com/google/grr/stargazers) Rapid Response
 
 
 
@@ -1119,11 +1055,11 @@ Useful for:
 
 
 
-# Open-Source Network Security Telemetry
+## 🌐 Open-Source Network Security Telemetry
 
 
 
-## Suricata
+## [Suricata](https://github.com/OISF/suricata) [![Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers)
 
 
 
@@ -1151,7 +1087,7 @@ Provides:
 
 
 
-## Zeek
+## [Zeek](https://github.com/zeek/zeek) [![Stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers)
 
 
 
@@ -1195,7 +1131,7 @@ Zeek is especially valuable for threat hunting.
 
 
 
-## Arkime
+## [Arkime](https://github.com/arkime/arkime) [![Stars](https://img.shields.io/github/stars/arkime/arkime?style=social&color=white)](https://github.com/arkime/arkime/stargazers)
 
 
 
@@ -1211,7 +1147,7 @@ Arkime provides large-scale packet capture indexing and network-session analysis
 
 
 
-## Suricata + Zeek + SIEM
+## [Suricata](https://github.com/OISF/suricata) [![Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) + Zeek + SIEM
 
 
 
@@ -1251,11 +1187,11 @@ SIEM
 
 
 
-# Open-Source Threat Intelligence
+## 🧠 Open-Source Threat Intelligence
 
 
 
-## MISP
+## [MISP](https://github.com/MISP/MISP) [![Stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers)
 
 
 
@@ -1289,7 +1225,7 @@ It provides:
 
 
 
-## OpenCTI
+## [OpenCTI](https://github.com/OpenCTI-Platform/opencti) [![Stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers)
 
 
 
@@ -1331,7 +1267,7 @@ Victim
 
 
 
-## Yeti
+## [Yeti](https://github.com/yeti-platform/yeti) [![Stars](https://img.shields.io/github/stars/yeti-platform/yeti?style=social&color=white)](https://github.com/yeti-platform/yeti/stargazers)
 
 
 
@@ -1347,7 +1283,7 @@ Open-source platform for organizing and enriching threat intelligence.
 
 
 
-## IntelOwl
+## [IntelOwl](https://github.com/intelowlproject/IntelOwl) [![Stars](https://img.shields.io/github/stars/intelowlproject/IntelOwl?style=social&color=white)](https://github.com/intelowlproject/IntelOwl/stargazers)
 
 
 
@@ -1363,7 +1299,7 @@ Provides automated intelligence analysis through multiple analyzers.
 
 
 
-# Open-Source Detection Engineering
+## 🎯 Open-Source Detection Engineering
 
 
 
@@ -1371,7 +1307,7 @@ Detection engineering is one of the most important parts of a SIEM.
 
 
 
-## Sigma
+## [Sigma](https://github.com/SigmaHQ/sigma) [![Stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers)
 
 
 
@@ -1427,7 +1363,7 @@ Sigma allows detection logic to be translated into platform-specific queries.
 
 
 
-## YARA
+## [YARA](https://github.com/VirusTotal/yara) [![Stars](https://img.shields.io/github/stars/VirusTotal/yara?style=social&color=white)](https://github.com/VirusTotal/yara/stargazers)
 
 
 
@@ -1443,7 +1379,7 @@ YARA is primarily a malware and pattern-matching framework but can provide high-
 
 
 
-## Suricata Rules
+## [Suricata](https://github.com/OISF/suricata) [![Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) Rules
 
 
 
@@ -1455,7 +1391,7 @@ Suricata signatures can provide network detection.
 
 
 
-## Zeek Scripts
+## [Zeek](https://github.com/zeek/zeek) [![Stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers) Scripts
 
 
 
@@ -1467,7 +1403,7 @@ Zeek's scripting language can create custom network detections.
 
 
 
-## Falco
+## [Falco](https://github.com/falcosecurity/falco) [![Stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers)
 
 
 
@@ -1493,7 +1429,7 @@ Falco provides runtime security detection for:
 
 
 
-## Tetragon
+## [Tetragon](https://github.com/cilium/tetragon) [![Stars](https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white)](https://github.com/cilium/tetragon/stargazers)
 
 
 
@@ -1509,7 +1445,7 @@ Provides eBPF-based security observability and runtime enforcement.
 
 
 
-# Open-Source Security Data Pipelines
+## ⚡ Open-Source Security Data Pipelines
 
 
 
@@ -1517,7 +1453,7 @@ Large SIEM deployments require reliable data transport.
 
 
 
-## Fluent Bit
+## [Fluent Bit](https://github.com/fluent/fluent-bit) [![Stars](https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white)](https://github.com/fluent/fluent-bit/stargazers)
 
 
 
@@ -1533,7 +1469,7 @@ Lightweight log collector.
 
 
 
-## Fluentd
+## [Fluentd](https://github.com/fluent/fluentd) [![Stars](https://img.shields.io/github/stars/fluent/fluentd?style=social&color=white)](https://github.com/fluent/fluentd/stargazers)
 
 
 
@@ -1549,7 +1485,7 @@ Flexible log collection and routing.
 
 
 
-## Vector
+## [Vector](https://github.com/vectordotdev/vector) [![Stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers)
 
 
 
@@ -1565,7 +1501,7 @@ High-performance observability data pipeline.
 
 
 
-## OpenTelemetry Collector
+## [OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector) [![Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers)
 
 
 
@@ -1581,7 +1517,7 @@ Provides vendor-neutral telemetry collection and routing.
 
 
 
-## Apache Kafka
+## [Apache Kafka](https://github.com/apache/kafka) [![Stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers)
 
 
 
@@ -1607,7 +1543,7 @@ Useful for:
 
 
 
-## Apache NiFi
+## [Apache NiFi](https://github.com/apache/nifi) [![Stars](https://img.shields.io/github/stars/apache/nifi?style=social&color=white)](https://github.com/apache/nifi/stargazers)
 
 
 
@@ -1623,7 +1559,7 @@ Visual dataflow platform suitable for security telemetry ingestion and transform
 
 
 
-## Logstash
+### [[Logstash](https://github.com/elastic/logstash)] [![Stars](https://img.shields.io/github/stars/elastic/logstash?style=social&color=white)](https://github.com/elastic/logstash/stargazers) (https://github.com/elastic/logstash) [![Stars](https://img.shields.io/github/stars/elastic/logstash?style=social&color=white)](https://github.com/elastic/logstash/stargazers)
 
 
 
@@ -1639,7 +1575,7 @@ A mature log-processing pipeline.
 
 
 
-# Additional Strong Open-Source Options
+## 🧩 Additional Strong Open-Source Options
 
 
 
@@ -1751,7 +1687,7 @@ A mature log-processing pipeline.
 
 
 
-# Commercial Platform → Open-Source Equivalents
+## 🔄 Commercial Platform → Open-Source Equivalents
 
 
 
@@ -1803,7 +1739,7 @@ A mature log-processing pipeline.
 
 
 
-# Frameworks for Building Custom SIEM Platforms
+## 🏗️ Frameworks for Building Custom SIEM Platforms
 
 
 
@@ -2287,7 +2223,7 @@ Response
 
 
 
-# Reference Architecture
+## 📐 Reference Architecture
 
 
 
@@ -2443,7 +2379,7 @@ flowchart TD
 
 
 
-# Typical SIEM Workflow
+## 🔄 Typical SIEM Workflow
 
 
 
@@ -2525,7 +2461,7 @@ flowchart LR
 
 
 
-# Log Collection Workflow
+## 📥 Log Collection Workflow
 
 
 
@@ -2597,7 +2533,7 @@ flowchart TD
 
 
 
-# Detection Engineering Workflow
+## 🎯 Detection Engineering Workflow
 
 
 
@@ -2663,7 +2599,7 @@ flowchart LR
 
 
 
-# Threat Hunting Workflow
+## 🏹 Threat Hunting Workflow
 
 
 
@@ -2735,7 +2671,7 @@ flowchart TD
 
 
 
-# Incident Investigation Workflow
+## 🔍 Incident Investigation Workflow
 
 
 
@@ -2823,7 +2759,7 @@ flowchart TD
 
 
 
-# Cloud SIEM Workflow
+## ☁️ Cloud SIEM Workflow
 
 
 
@@ -3639,7 +3575,7 @@ DFIR
 
 
 
-# Capability Matrix
+## 📋 Capability Matrix
 
 
 
@@ -3685,7 +3621,7 @@ DFIR
 
 
 
-# Recommended Open-Source Stacks
+## 💡 Recommended Open-Source Stacks
 
 
 
@@ -4249,7 +4185,7 @@ flowchart LR
 
 
 
-# What Is Still Difficult to Reproduce in Open Source?
+## 🤔 What Is Still Difficult to Reproduce in Open Source?
 
 
 
@@ -4653,7 +4589,7 @@ Human approval
 
 
 
-# Why Open Source Is Interesting
+## ✨ Why Open Source Is Interesting
 
 
 
@@ -5719,7 +5655,7 @@ This architecture can reproduce a substantial portion of the functional surface 
 
 
 
-# How to Contribute
+## 🤝 How to Contribute
 
 
 
@@ -5773,7 +5709,13 @@ Pull requests are welcome.
 
 
 
-# Disclaimer
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Security-Information-n-Event-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Security-Information-n-Event-Management&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
 
 
 
@@ -5902,3 +5844,27 @@ Continuous Tuning
 
 
 > **The strongest open-source SIEM strategy is therefore not to find one "free Splunk." It is to assemble an open, modular security platform in which Wazuh/OpenSearch provide the analytics foundation, Sigma/Suricata/Zeek provide detection, MISP/OpenCTI provide intelligence, TheHive/DFIR-IRIS provide investigation and Shuffle/StackStorm provide response automation.**
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue to suggest new open-source SIEM solutions, detection rules, data pipelines, or architecture improvements.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Security-Information-n-Event-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Security-Information-n-Event-Management&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
+
+This repository is curated for educational, research, security engineering, and informational purposes only. All product names, logos, brands, and trademarks referenced herein belong to their respective trademark holders.

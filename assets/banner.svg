@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911" />
+      <stop offset="35%" stop-color="#0b1324" />
+      <stop offset="70%" stop-color="#071a2e" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+
+    <!-- Cyber Neon Accent Gradients -->
+    <linearGradient id="neon-cyan-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="40%" stop-color="#4facfe" />
+      <stop offset="75%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="shield-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- CSS Keyframe Animations -->
+    <style>
+      @keyframes laserScan {
+        0% { transform: translateY(0px); opacity: 0.15; }
+        50% { opacity: 0.85; }
+        100% { transform: translateY(270px); opacity: 0.15; }
+      }
+      @keyframes pulseRing {
+        0% { r: 55px; opacity: 0.8; }
+        100% { r: 125px; opacity: 0; }
+      }
+      @keyframes floatShield {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes streamFlow {
+        0% { stroke-dashoffset: 180; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes blinkDot {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      .laser-bar {
+        animation: laserScan 4.2s ease-in-out infinite alternate;
+      }
+      .siem-core {
+        animation: floatShield 5s ease-in-out infinite;
+        transform-origin: 175px 210px;
+      }
+      .pulse-wave {
+        animation: pulseRing 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+        transform-origin: 175px 210px;
+      }
+      .data-pipe {
+        stroke-dasharray: 8 6;
+        animation: streamFlow 5s linear infinite;
+      }
+      .radar-sweep-arm {
+        transform-origin: 175px 210px;
+        animation: radarSweep 7.5s linear infinite;
+      }
+      .live-blink {
+        animation: blinkDot 1.8s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Frame -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Cyber Matrix Grid Background -->
+  <g stroke="#00f2fe" stroke-opacity="0.04" stroke-width="1">
+    <path d="M0,60 L1200,60 M0,120 L1200,120 M0,180 L1200,180 M0,240 L1200,240 M0,300 L1200,300 M0,360 L1200,360" />
+    <path d="M80,0 L80,420 M160,0 L160,420 M240,0 L240,420 M320,0 L320,420 M400,0 L400,420 M480,0 L480,420 M560,0 L560,420 M640,0 L640,420 M720,0 L720,420 M800,0 L800,420 M880,0 L880,420 M960,0 L960,420 M1040,0 L1040,420 M1120,0 L1120,420" />
+  </g>
+
+  <!-- Ambient Glow Behind Central Shield -->
+  <circle cx="175" cy="210" r="170" fill="url(#center-glow)" />
+
+  <!-- Telemetry Data Ingestion Streams (Background Pipelines) -->
+  <g fill="none" stroke-width="2">
+    <path d="M 330 100 L 450 100 L 510 150 L 850 150" stroke="#00f2fe" stroke-opacity="0.3" class="data-pipe" />
+    <path d="M 330 210 L 490 210 L 550 255 L 940 255" stroke="#6366f1" stroke-opacity="0.35" class="data-pipe" />
+    <path d="M 330 320 L 470 320 L 530 280 L 880 280" stroke="#10b981" stroke-opacity="0.3" class="data-pipe" />
+  </g>
+
+  <!-- Pulsing Target Rings -->
+  <circle cx="175" cy="210" r="55" fill="none" stroke="#00f2fe" stroke-width="1.5" class="pulse-wave" />
+
+  <!-- Left: SIEM Telemetry Radar & Shield -->
+  <g class="siem-core">
+    <!-- Concentric Range Circles -->
+    <circle cx="175" cy="210" r="115" fill="none" stroke="#00f2fe" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="4 6" />
+    <circle cx="175" cy="210" r="88" fill="none" stroke="#6366f1" stroke-opacity="0.22" stroke-width="1.5" />
+    <circle cx="175" cy="210" r="62" fill="none" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="6 4" />
+
+    <!-- Radar Sweep Arm -->
+    <g class="radar-sweep-arm">
+      <line x1="175" y1="210" x2="285" y2="210" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.8" />
+      <polygon points="175,210 285,180 285,210" fill="#00f2fe" fill-opacity="0.15" />
+    </g>
+
+    <!-- Outer Hexagonal Threat Defense Perimeter -->
+    <polygon points="175,105 250,148 250,252 175,295 100,252 100,148"
+             fill="#081426" fill-opacity="0.8" stroke="url(#neon-cyan-blue)" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- Central Crest Shield -->
+    <path d="M 175 140 L 222 165 L 222 220 C 222 258 175 282 175 282 C 175 282 128 258 128 220 L 128 165 Z"
+          fill="none" stroke="url(#shield-core)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+
+    <!-- Correlation Core Node -->
+    <polygon points="175,172 192,202 178,202 184,228 162,206 173,206" fill="#00f2fe" class="live-blink" />
+
+    <!-- Perimeter Sensor Nodes -->
+    <circle cx="175" cy="105" r="4.5" fill="#00f2fe" />
+    <circle cx="250" cy="148" r="4.5" fill="#10b981" />
+    <circle cx="250" cy="252" r="4.5" fill="#6366f1" />
+    <circle cx="175" cy="295" r="4.5" fill="#ff0055" />
+    <circle cx="100" cy="252" r="4.5" fill="#00f2fe" />
+    <circle cx="100" cy="148" r="4.5" fill="#4facfe" />
+  </g>
+
+  <!-- Laser Scanning Bar -->
+  <g class="laser-bar">
+    <line x1="75" y1="80" x2="275" y2="80" stroke="#00f2fe" stroke-width="2.5" stroke-linecap="round" opacity="0.85" />
+    <polygon points="75,80 275,80 255,96 95,96" fill="#00f2fe" opacity="0.18" />
+  </g>
+
+  <!-- Text & Interface Layout (Right Section) -->
+  <g transform="translate(345, 0)">
+    <!-- Top Category Pill -->
+    <g transform="translate(0, 64)">
+      <rect width="365" height="30" rx="15" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.35" stroke-width="1.2" />
+      <circle cx="16" cy="15" r="4" fill="#00f2fe" class="live-blink" />
+      <text x="30" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#00f2fe" letter-spacing="1.5">ENTERPRISE &amp; OPEN-SOURCE SIEM ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 142)">
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="-0.5">
+        AWESOME <tspan fill="url(#neon-cyan-blue)">SIEM</tspan>
+      </text>
+    </g>
+
+    <!-- Subtitle / Mission Statement -->
+    <g transform="translate(0, 180)">
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="500" fill="#cbd5e1" letter-spacing="0.2">
+        Security Information &amp; Event Management <tspan fill="#00f2fe">•</tspan> Log Analytics <tspan fill="#00f2fe">•</tspan> Threat Detection
+      </text>
+      <text y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#94a3b8">
+        Detection Engineering (Sigma/YARA) • Correlation • UEBA • Threat Hunting • Autonomous SOC
+      </text>
+    </g>
+
+    <!-- Pipeline Architecture Visualizer -->
+    <g transform="translate(0, 245)">
+      <!-- Step 1: Telemetry -->
+      <rect x="0" y="0" width="105" height="34" rx="6" fill="#0f1d36" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1" />
+      <text x="52" y="22" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700" fill="#00f2fe" text-anchor="middle">TELEMETRY</text>
+      <line x1="105" y1="17" x2="125" y2="17" stroke="#00f2fe" stroke-opacity="0.6" stroke-width="1.5" />
+      <polyline points="121,13 126,17 121,21" fill="none" stroke="#00f2fe" stroke-opacity="0.8" stroke-width="1.5" />
+
+      <!-- Step 2: Ingest -->
+      <rect x="130" y="0" width="95" height="34" rx="6" fill="#0f1d36" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="177" y="22" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">INGEST</text>
+      <line x1="225" y1="17" x2="245" y2="17" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.5" />
+      <polyline points="241,13 246,17 241,21" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="1.5" />
+
+      <!-- Step 3: Correlate -->
+      <rect x="250" y="0" width="115" height="34" rx="6" fill="#131b3d" stroke="#6366f1" stroke-opacity="0.45" stroke-width="1" />
+      <text x="307" y="22" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700" fill="#818cf8" text-anchor="middle">CORRELATE</text>
+      <line x1="365" y1="17" x2="385" y2="17" stroke="#6366f1" stroke-opacity="0.6" stroke-width="1.5" />
+      <polyline points="381,13 386,17 381,21" fill="none" stroke="#6366f1" stroke-opacity="0.8" stroke-width="1.5" />
+
+      <!-- Step 4: Detect -->
+      <rect x="390" y="0" width="95" height="34" rx="6" fill="#092225" stroke="#10b981" stroke-opacity="0.5" stroke-width="1" />
+      <text x="437" y="22" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700" fill="#10b981" text-anchor="middle">DETECT</text>
+      <line x1="485" y1="17" x2="505" y2="17" stroke="#10b981" stroke-opacity="0.6" stroke-width="1.5" />
+      <polyline points="501,13 506,17 501,21" fill="none" stroke="#10b981" stroke-opacity="0.8" stroke-width="1.5" />
+
+      <!-- Step 5: Triage & Respond -->
+      <rect x="510" y="0" width="145" height="34" rx="6" fill="#2a101d" stroke="#ff0055" stroke-opacity="0.55" stroke-width="1" />
+      <text x="582" y="22" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700" fill="#ff4d88" text-anchor="middle">TRIAGE &amp; RESPOND</text>
+    </g>
+
+    <!-- Key Metrics Tags -->
+    <g transform="translate(0, 312)">
+      <g transform="translate(0, 0)">
+        <rect width="180" height="38" rx="6" fill="#0a1220" stroke="#1e293b" stroke-width="1.2" />
+        <circle cx="18" cy="19" r="3.5" fill="#00f2fe" />
+        <text x="32" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b">INDEXING SCALE</text>
+        <text x="32" y="30" font-family="ui-monospace, Consolas, monospace" font-size="12" font-weight="700" fill="#f8fafc">Petabyte / Real-Time</text>
+      </g>
+
+      <g transform="translate(195, 0)">
+        <rect width="175" height="38" rx="6" fill="#0a1220" stroke="#1e293b" stroke-width="1.2" />
+        <circle cx="18" cy="19" r="3.5" fill="#10b981" />
+        <text x="32" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b">DETECTION STACK</text>
+        <text x="32" y="30" font-family="ui-monospace, Consolas, monospace" font-size="12" font-weight="700" fill="#f8fafc">Sigma • YARA • UDM</text>
+      </g>
+
+      <g transform="translate(385, 0)">
+        <rect width="185" height="38" rx="6" fill="#0a1220" stroke="#1e293b" stroke-width="1.2" />
+        <circle cx="18" cy="19" r="3.5" fill="#a855f7" />
+        <text x="32" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b">COVERAGE</text>
+        <text x="32" y="30" font-family="ui-monospace, Consolas, monospace" font-size="12" font-weight="700" fill="#f8fafc">MITRE ATT&amp;CK Matrix</text>
+      </g>
+
+      <g transform="translate(585, 0)">
+        <rect width="180" height="38" rx="6" fill="#0a1220" stroke="#1e293b" stroke-width="1.2" />
+        <circle cx="18" cy="19" r="3.5" fill="#f59e0b" />
+        <text x="32" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b">ARCHITECTURES</text>
+        <text x="32" y="30" font-family="ui-monospace, Consolas, monospace" font-size="12" font-weight="700" fill="#f8fafc">Cloud • Hybrid • OSS</text>
+      </g>
+    </g>
+  </g>
+</svg>
