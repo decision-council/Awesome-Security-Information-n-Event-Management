@@ -1664,6 +1664,7 @@ A mature log-processing pipeline.
 * [Tetragon](https://github.com/cilium/tetragon)
 
 * [Suricata](https://github.com/OISF/suricata)
+* [KeyDrift](https://keydrift.dev) - Scans deployed HTML and JavaScript for exposed secrets while recognizing public browser credentials that should not be treated as leaks.
 
 
 
